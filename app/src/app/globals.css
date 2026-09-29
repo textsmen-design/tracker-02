@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn        { @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition; }
+  .btn-primary{ @apply btn bg-sky text-white hover:bg-ink; }
+  .btn-ghost  { @apply btn border border-slate-300 bg-white text-ink hover:bg-slate-50; }
+  .field      { @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky focus:ring-2 focus:ring-sky/20; }
+  .label      { @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-slate-500; }
+  .card       { @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm; }
+  .chip       { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold; }
+}

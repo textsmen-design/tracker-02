@@ -1,0 +1,71 @@
+# Секреты и окружение
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+.pgpass
+.npmrc
+.npmrc.local
+
+# Зависимости
+node_modules/
+*/node_modules/
+**/node_modules/
+vendor/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Сборочные артефакты
+.next/
+
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Логи, кэши, временные файлы
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.cache/
+.tmp/
+tmp/
+*.pid
+*.seed
+*.bak
+
+# Редакторы и ОС
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Сервисы и деплой
+.wrangler/
+.vercel/
+.netlify/
+.firebase/
+
+# Дампы и локальные данные
+*.sql.gz
+*.dump
+*.sqlite
+*.db
+dump.rdb
