@@ -1,5 +1,8 @@
 # Tracker_02 «TaskFlow» — задачи и сотрудники (Кейс №2 курса FGIp07)
 
+> **Live Demo**: [https://tracker-02.gonka.blog/](https://tracker-02.gonka.blog/)
+> **Репозиторий**: [https://github.com/textsmen-design/tracker-02](https://github.com/textsmen-design/tracker-02)
+
 Учебный MVP по реальному объявлению **freelance.ru #1656833**
 «Разработка Веб-приложения на Next.js для автоматизации управления задачами и сотрудниками».
 Объявление в архиве, отклик не отправлялся, переписки с заказчиком не было —
@@ -68,6 +71,15 @@ node shots.js                                     # скриншоты в doc/sc
 Отчёт о тестировании — `doc/test_report.md`.
 Скриншоты: `doc/screenshots/first_run/` (первый рабочий запуск) и `doc/screenshots/final/`.
 
+## Production и деплой
+
+Production разворачивается из этого репозитория (ветка `main`) — GitHub является
+source of truth. Подробности: `DEPLOY.md`, скрипт — `scripts/deploy.sh`.
+
+- Live: https://tracker-02.gonka.blog
+- VDS #1 (FirstVDS, Москва), `/opt/tracker-02`, systemd + nginx, PostgreSQL 16.
+- Обновление: `git push origin main` → на VDS `bash scripts/deploy.sh`.
+
 ## Структура
 
 ```
@@ -80,6 +92,5 @@ e2e/     браузерные проверки и скрипт скриншот�
 
 ## Что НЕ сделано (честно)
 
-- Публичная ссылка не создавалась: деплой на Vercel/Render требует аккаунтов клиента.
 - Supabase Auth и OpenAI API не подключены — нужны ключи клиента (см. `info/tz.md` §8).
 - Удаление задач и вложения в MVP не делались — в объявлении их нет.
