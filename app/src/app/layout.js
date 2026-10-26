@@ -4,7 +4,7 @@ import { currentUser, isAdmin } from '@/lib/auth';
 
 export const metadata = {
   title: 'TaskFlow — задачи и сотрудники',
-  description: 'Учебный MVP по заказу freelance.ru #1656833',
+  description: 'Демонстрационный проект: трекер задач и сотрудников.',
 };
 
 function Logo() {
@@ -23,6 +23,12 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body className="min-h-screen bg-paper text-ink antialiased">
+        <div
+          role="note"
+          style={{ background: '#fef3c7', color: '#78350f', textAlign: 'center', fontSize: '13px', lineHeight: 1.4, padding: '7px 12px', borderBottom: '1px solid #f59e0b' }}
+        >
+          Демонстрационный проект. Сотрудники, задачи и данные вымышлены и показаны как пример.
+        </div>
         {user && (
           <header className="border-b border-slate-200 bg-white">
             <div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-3">
